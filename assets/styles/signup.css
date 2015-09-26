@@ -9,6 +9,16 @@ ol, ul, li {list-style:none}
 
 :focus {outline:none}
 
+.overlay {
+  display:none;
+  position:fixed;
+  top:0;
+  height:100%;
+  width:100%;
+  background:#333;
+  overflow:auto;
+  z-index:99;
+}
 body,
 input,
 textarea,
@@ -36,6 +46,27 @@ h1 {
 html{
   background-color: #ffffff;
 }
+.modal-content {
+  width: 343px;
+}
+.modal {
+  text-align: center;
+}
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+@media screen and (min-width: 768px) { 
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+
 
 .testbox {
   margin: 20px auto;
@@ -108,7 +139,7 @@ hr{
   opacity: 0.3;
 }
 
-input[type=text],input[type=password]{
+.modal-body.input[type=text],input[type=password]{
   width: 200px; 
   height: 39px; 
   -webkit-border-radius: 0px 4px 4px 0px/5px 5px 4px 4px; 
@@ -184,4 +215,6 @@ a.button:hover {
   box-shadow: none;
   
 }
+
+
 
