@@ -1,0 +1,101 @@
+.page-scroll {
+	font-size:14pxpx;
+}
+#signup {
+	color:white;
+	border:1px solid #3A57AF;
+	border-radius:3px;
+	width:92px;
+	height:32px;
+	text-align:center;
+	background:#3A57AF;
+}
+#signin {
+	color:white;
+	border:1px solid #3A57AF;
+	border-radius:3px;
+	width:92px;
+	height:32px;
+	text-align:center;
+	background:#3A57AF;
+	vertical-align:middle;
+}
+#signinbox {
+	padding-bottom:15px;
+	padding-top:15px;
+	position:relative;
+	display:block;
+	padding:15px;
+}
+.inputbox {
+	position:relative;
+	display:block;
+	padding:15px;
+	padding-top:12px;
+	padding-bottom:15px;
+}
+.input {
+	background-color:#ededed;
+	border:3px solid #ededed;
+}
+.navbar {
+	background-color:transparent;
+	border: transparent;
+}
+.navbar-brand {
+	color:#3A57AF;
+}
+header {
+	text-align: center;
+    color: #ffffff;
+    background-attachment: scroll;
+    background-image: url(../images/header-bg.jpg);
+    background-position: center center;
+    background-repeat: none;
+    background-size: cover;
+}
+header .intro-text {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+header .intro-text .intro-lead-in {
+    margin-bottom: 25px;
+    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 22px;
+}
+
+header .intro-text .intro-heading {
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 50px;
+}
+
+@media(min-width:768px) {
+    header .intro-text {
+        padding-top: 300px;
+        padding-bottom: 200px;
+    }
+
+    header .intro-text .intro-lead-in {
+        margin-bottom: 25px;
+        font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 40px;
+        font-style: italic;
+        line-height: 40px;
+    }
+
+    header .intro-text .intro-heading {
+        margin-bottom: 50px;
+        text-transform: uppercase;
+        font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 75px;
+        font-weight: 700;
+        line-height: 75px;
+    }
+}
