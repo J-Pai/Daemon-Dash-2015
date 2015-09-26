@@ -21,11 +21,11 @@ module.exports = {
     type: {
         type: 'string',
         required: true
-    }
+    },
     encryptedPassword: {
         type: 'string',
         required: true
-    }
+    },
     lastLoggedIn: {
         type: 'date',
         required: true,
