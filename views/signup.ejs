@@ -9,7 +9,8 @@
     	<div class="testbox">
         	<h1>Registration</h1>
 
-    		<form id="signup-form" action="/user/create" method="post">
+    		<!-- <form id="signup-form" action="/user/create" method="post" > -->
+            <form id="signup-form" >
         		<hr>
            		<div class="accounttype">
             		<input type="radio" value="volunteer" id="radioOne" name="account" checked/>
@@ -34,7 +35,7 @@
     				<input type="radio" value="None" id="female" name="gender" />
     				<label for="female" class="radio">Female</label>
     			</div> 
-    			<a href="#" class="button" onclick="this.parentNode.submit()">Register</a>
+    			<a href="#" class="button" onclick="document.getElementById('signup-form').submit()">Register</a>
     		</form>
     	</div>
 	</body>
