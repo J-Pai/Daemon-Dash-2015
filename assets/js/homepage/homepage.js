@@ -9,26 +9,26 @@ $(function() {
         $formRegister.submit()
     });
     $("#signinbox").on('click', function() {
-        //$formLogin.submit();
         $.post("/login",
             $("#username, #password").serialize(),
             function(msg) {
-                var accountType = null;
-
-                $.post("/user/find",
-                    $('#username').serialize(),
-                    function(data) {
-                        accountType = data[0].account;
-                        if(accountType === "Personal") {
-                            document.location.href = "/personal";
-                        } else {
-                            document.location.href = "/organization";
+                console.log(msg.message);
+                if(msg.message === "Logged In Successfully"){
+                    var accountType = null;
+                    $.post("/user/find",
+                        $('#username').serialize(),
+                        function(data) {
+                            accountType = data[0].account;
+                            if(accountType === "Personal") {
+                                document.location.href = "/personal";
+                            } else {
+                                document.location.href = "/organization";
+                            }
                         }
-                    }
-                );
+                    );
+                }
             }
         ); 
-        console.log($("#username, #password").serialize())
     })
 
     $("form").submit(function () {
