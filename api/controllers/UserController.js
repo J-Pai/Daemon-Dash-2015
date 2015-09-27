@@ -15,7 +15,9 @@ module.exports = {
             password: req.param('password')
         }).exec(
             function(err, user) {
-                if (err) return res.send(err, 500);
+                if (err) {
+                    return res.send(err, 500);
+                }
                 return res.redirect('/');
             }
         );
