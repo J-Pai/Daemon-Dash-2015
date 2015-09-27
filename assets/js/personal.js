@@ -1,4 +1,5 @@
 $(function() {
+    var id;
     $.post('/getCurrentUser',
         function (data) {
             $.post('/user/find',
@@ -12,6 +13,7 @@ $(function() {
 
     $("body").on('click','button',function() {
         if (this.id != "submit") {
+            id = this.id;
             $.post('/events/find',
                 {id: this.id},
                 function (events) {
@@ -23,9 +25,16 @@ $(function() {
 
                 );
         }
-
     });
-
+    $("#submit").on('click', function() {
+        if (id != undefined) {
+            $.post('/events/addPerson',
+                {id: id},
+                function (events) {
+                    console.log("hello")
+                })
+        }
+    })
     io.socket.post('/events/join',
         function (data, jwres) {
             $.post('/events/findAll',
