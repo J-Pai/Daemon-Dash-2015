@@ -6,8 +6,11 @@
  */
 
 module.exports = {
-    session: function(req, res) {
+    personal: function(req, res) {
         return res.view('session');
+    },
+    organization: function(req, res) {
+        return res.view('organization');
     }
 };
 

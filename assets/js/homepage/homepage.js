@@ -15,10 +15,15 @@ $(function() {
             function(msg) {
                 var accountType = null;
 
-                $.post("/login/find",
+                $.post("/user/find",
                     $('#username').serialize(),
-                    function(msg) {
-                        document.location.href = "/session";
+                    function(data) {
+                        accountType = data[0].account;
+                        if(accountType === "Personal") {
+                            document.location.href = "/personal";
+                        } else {
+                            document.location.href = "/organization";
+                        }
                     }
                 );
             }
