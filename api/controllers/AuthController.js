@@ -39,6 +39,10 @@ module.exports = {
     logout: function(req, res) {
         req.logout();
         res.redirect('/');
+    },
+    getCurrentUser: function(req, res) {
+        console.log(req.session.passport);
+        return res.send(req.session.passport);
     }
 };
 

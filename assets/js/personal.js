@@ -1,3 +1,9 @@
+$.post('/getCurrentUser',
+    function (data) {
+        
+    }
+);
+
 var eventList = $('#event-list');
 
 io.socket.post('/events/join',

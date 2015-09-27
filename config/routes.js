@@ -53,4 +53,5 @@ module.exports.routes = {
   'POST /events/join': 'EventsController.join',
   'POST /login': 'AuthController.login',
   '/logout': 'AuthController.logout',
+  '/getCurrentUser': 'AuthController.getCurrentUser',
 };
