@@ -24,7 +24,6 @@ module.exports = {
             }
             req.logIn(user, function(err) {
                 if (err) {
-                    console.log(err)
                     return res.send(err);
                 }
                 return res.send({

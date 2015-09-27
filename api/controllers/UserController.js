@@ -16,7 +16,6 @@ module.exports = {
         }).exec(
             function(err, user) {
                 if (err) {
-                    console.log(err);
                     return res.send(err, 500);
                 }
                 return res.redirect('/');

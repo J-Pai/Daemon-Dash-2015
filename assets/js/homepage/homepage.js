@@ -20,7 +20,6 @@ $(function() {
         $.post("/login",
             $("#username, #password").serialize(),
             function(msg) {
-                console.log(msg.message);
                 if(msg.message === "Logged In Successfully"){
                     var accountType = null;
                     $.post("/user/find",
@@ -41,7 +40,6 @@ $(function() {
             ); 
     }
     $("form").submit(function () {
-        console.log($formRegister.serialize)
         $.post("/user/create",
             $formRegister.serialize(),
             function(msg){ }
@@ -61,6 +59,9 @@ $(function() {
             var $rg_username=$('#register_username').val();
             var $rg_email=$('#register_email').val();
             var $rg_password=$('#register_password').val();
+            if($rg_username==undefined || $rg_email==undefined || $rg_password==undefined){
+                alert("please fill out all fields.");
+            } 
             if ($rg_username == "ERROR") {
                 msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "error", "glyphicon-remove", "Register error");
             } else {

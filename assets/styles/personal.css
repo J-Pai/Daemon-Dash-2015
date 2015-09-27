@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .container {
 	position:fixed;
 	width:800px;
@@ -51,4 +52,7 @@ html {
 	background-color:#ededed;
 	border-color:transparent;
 	color:#2F3235;
+
+body {
+    background-color: #66aaa8;
 }
