@@ -40,13 +40,16 @@ module.exports = {
         Events.find({id: req.param('id')}).exec(
             function(err, eventData) {
                 var name = req.param('name');
-                eventData[0].volunteers.push(name);
-                Events.update({id: req.param('id')}, {volunteers: eventData[0].volunteers}).exec(
-                    function(err, update){
-                        if(err) return res.send(err);
-                        return res.send(update);
-                    }
-                );
+                var check = eventData[0].volunteers.indexOf(name);
+                if(check === -1){
+                    eventData[0].volunteers.push(name);
+                    Events.update({id: req.param('id')}, {volunteers: eventData[0].volunteers}).exec(
+                        function(err, update){
+                            if(err) return res.send(err);
+                            return res.send(update);
+                        }
+                    );
+                }
             }
         );        
     },
