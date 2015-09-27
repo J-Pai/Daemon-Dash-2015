@@ -13,7 +13,11 @@ $(function() {
     })
 
     $("form").submit(function () {
-        console.log($formRegister.serialize())
+        $.post("/user/create",
+            $formRegister.serialize(),
+            function(msg){  }
+        );
+
         switch(this.id) {
             case "login-form":
                 var $lg_username=$('#login_username').val();

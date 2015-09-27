@@ -27,11 +27,11 @@ module.exports = {
         minLength: 3, 
         required: true
     },
-    toJSON: function() {
+/*    toJSON: function() {
         var obj = this.toObject();
         delete obj.password;
         return obj;
-    }
+    }*/
   },
     beforeCreate: function(user, cb) {
         bcrypt.genSalt(10, function(err, salt) {
