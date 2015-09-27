@@ -9,7 +9,7 @@ $(function() {
         $formRegister.submit()
     });
     $("#signinbox").on('click', function() {
-        $formLogin.submit()
+        console.log($("#username, #password").serialize())
     })
 
     $("form").submit(function () {
@@ -17,7 +17,6 @@ $(function() {
             $formRegister.serialize(),
             function(msg){  }
         );
-
         switch(this.id) {
             case "login-form":
                 var $lg_username=$('#login_username').val();
