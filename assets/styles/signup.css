@@ -14,13 +14,15 @@ ol, ul, li {list-style:none}
 
 #signup {
   color:white;
-  border:1px solid #3A57AF;
+  border:1px solid #3A84DA;
   border-radius:3px;
   width:92px;
   height:32px;
+  background:#3A84DA;
   text-align:center;
-  background:#3A57AF;
-}
+  vertical-align:middle;
+  padding-top:4px;
+  }
 #signin {
   color:white;
   border:1px solid #3A57AF;
@@ -30,13 +32,21 @@ ol, ul, li {list-style:none}
   text-align:center;
   background:#3A57AF;
   vertical-align:middle;
+  padding-top:4px;
 }
 #signinbox {
   padding-bottom:15px;
-  padding-top:15px;
+  padding-top:10px;
+  padding-left:15px;
+  padding-right:15px;
   position:relative;
   display:block;
-  padding:15px;
+}
+#signupbox {
+  padding-bottom:15px;
+  padding-top:10px;
+  position:relative;
+  display:block;
 }
 .inputbox {
   position:relative;
@@ -173,14 +183,13 @@ form{
 }
 
 label.radio {
-	cursor: pointer;
+`cursor: pointer;
   text-indent: 35px;
   overflow: visible;
   display: inline-block;
   position: relative;
   margin-bottom: 15px;
 }
-
 label.radio:before {
   background: #3a57af;
   content:'';
@@ -225,7 +234,7 @@ hr{
   display: inline-block;
   width: 30px;
   background-color: #3a57af;
-  padding: 8px 0px 8px 15px;
+  padding: 8px 28px 8px 15px;
   margin-left: 15px;
   -webkit-border-radius: 4px 0px 0px 4px; 
   -moz-border-radius: 4px 0px 0px 4px; 
@@ -237,11 +246,6 @@ hr{
   border: solid 0px #cbc9c9;
 }
 
-
-.accounttype{
-  margin-left: 8px;
-  margin-top: 20px;
-}
 
 
 

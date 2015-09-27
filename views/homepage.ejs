@@ -45,9 +45,10 @@
 							</div>
 						</li>
 						<li>
-							<a class="page-scroll">
-								<button id="signup" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Sign Up</button>
-							</a>
+							<div id="signupbox" class="page-scroll">
+								<div id="signup" data-toggle="modal" data-target="#myModal">Sign Up</div>
+							
+							</div>
 						</li>
 					</ul>
 				</div>
@@ -73,14 +74,12 @@
 						</div>
 						<div class="modal-body">
 							<form id="sign-up-form">
-								<hr>
 								<div class="accounttype">
 									<input type="radio" value="None" id="radioOne" name="account" checked/>
 									<label for="radioOne" class="radio" chec>Personal</label>
 									<input type="radio" value="None" id="radioTwo" name="account" />
 									<label for="radioTwo" class="radio">Company</label>
 								</div>
-								<hr>
 								<div class="form-group">
 									<label id="icon" for="name">
 										<span class="glyphicon glyphicon-envelope"></span></label>
