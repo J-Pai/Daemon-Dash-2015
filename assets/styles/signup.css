@@ -8,7 +8,124 @@ fieldset, img {border:0}
 ol, ul, li {list-style:none}
 
 :focus {outline:none}
+.page-scroll {
+  font-size:14pxpx;
+}
 
+#signup {
+  color:white;
+  border:1px solid #3A84DA;
+  border-radius:3px;
+  width:92px;
+  height:32px;
+  background:#3A84DA;
+  text-align:center;
+  vertical-align:middle;
+  padding-top:4px;
+  }
+#signin {
+  color:white;
+  border:1px solid #3A57AF;
+  border-radius:3px;
+  width:92px;
+  height:32px;
+  text-align:center;
+  background:#3A57AF;
+  vertical-align:middle;
+  padding-top:4px;
+}
+#signinbox {
+  padding-bottom:15px;
+  padding-top:10px;
+  padding-left:15px;
+  padding-right:15px;
+  position:relative;
+  display:block;
+}
+#signupbox {
+  padding-bottom:15px;
+  padding-top:10px;
+  position:relative;
+  display:block;
+}
+.inputbox {
+  position:relative;
+  display:block;
+  padding:15px;
+  padding-top:12px;
+  padding-bottom:15px;
+}
+.input {
+  background-color:#ededed;
+  border:3px solid #ededed;
+}
+.navbar {
+  background-color:transparent;
+  border: transparent;
+}
+.navbar-brand {
+  color:#3A57AF;
+}
+.modal-dialog {
+  width: 300px;
+  display: center;
+  text-align: middle;
+  vertical-align: middle;
+}
+header {
+  text-align: center;
+    color: #ffffff;
+    background-attachment: scroll;
+    background-image: url(../images/header-bg.jpg);
+    background-position: center center;
+    background-repeat: none;
+    background-size: cover;
+}
+header .intro-text {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+header .intro-text .intro-lead-in {
+    margin-bottom: 25px;
+    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 22px;
+}
+
+header .intro-text .intro-heading {
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 50px;
+}
+
+@media(min-width:768px) {
+    header .intro-text {
+        padding-top: 300px;
+        padding-bottom: 200px;
+    }
+
+    header .intro-text .intro-lead-in {
+        margin-bottom: 25px;
+        font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 40px;
+        font-style: italic;
+        line-height: 40px;
+    }
+
+    header .intro-text .intro-heading {
+        margin-bottom: 50px;
+        text-transform: uppercase;
+        font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 75px;
+        font-weight: 700;
+        line-height: 75px;
+    }
+}
 body,
 input,
 textarea,
@@ -36,19 +153,16 @@ h1 {
 html{
   background-color: #ffffff;
 }
-
-.testbox {
-  margin: 20px auto;
-  width: 343px; 
-  height: 405px; 
-  -webkit-border-radius: 8px/7px; 
-  -moz-border-radius: 8px/7px; 
-  border-radius: 8px/7px; 
-  background-color: #ebebeb; 
-  -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
-  -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
-  box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
-  border: solid 1px #cbc9c9;
+.modal-content {
+  width: 343px;
+}
+.modal {
+  text-align: center;
+}
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
 }
 
 input[type=radio] {
@@ -56,18 +170,17 @@ input[type=radio] {
 }
 
 form{
-  margin: 0 30px;
+  margin: 30px;
 }
 
 label.radio {
-	cursor: pointer;
+`cursor: pointer;
   text-indent: 35px;
   overflow: visible;
   display: inline-block;
   position: relative;
   margin-bottom: 15px;
 }
-
 label.radio:before {
   background: #3a57af;
   content:'';
@@ -108,31 +221,11 @@ hr{
   opacity: 0.3;
 }
 
-input[type=text],input[type=password]{
-  width: 200px; 
-  height: 39px; 
-  -webkit-border-radius: 0px 4px 4px 0px/5px 5px 4px 4px; 
-  -moz-border-radius: 0px 4px 4px 0px/0px 0px 4px 4px; 
-  border-radius: 0px 4px 4px 0px/5px 5px 4px 4px; 
-  background-color: #fff; 
-  -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
-  -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
-  box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
-  border: solid 1px #cbc9c9;
-  margin-left: -5px;
-  margin-top: 13px; 
-  padding-left: 10px;
-}
-
-input[type=password]{
-  margin-bottom: 25px;
-}
-
 #icon {
   display: inline-block;
   width: 30px;
   background-color: #3a57af;
-  padding: 8px 0px 8px 15px;
+  padding: 8px 28px 8px 15px;
   margin-left: 15px;
   -webkit-border-radius: 4px 0px 0px 4px; 
   -moz-border-radius: 4px 0px 0px 4px; 
@@ -144,44 +237,7 @@ input[type=password]{
   border: solid 0px #cbc9c9;
 }
 
-.gender {
-  margin-left: 30px;
-  margin-bottom: 30px;
-}
 
-.accounttype{
-  margin-left: 8px;
-  margin-top: 20px;
-}
 
-a.button {
-  font-size: 14px;
-  font-weight: 600;
-  color: white;
-  padding: 6px 25px 0px 20px;
-  margin: 10px 8px 20px 0px;
-  display: inline-block;
-  float: right;
-  text-decoration: none;
-  width: 50px; height: 27px; 
-  -webkit-border-radius: 5px; 
-  -moz-border-radius: 5px; 
-  border-radius: 5px; 
-  background-color: #3a57af; 
-  -webkit-box-shadow: 0 3px rgba(58,87,175,.75); 
-  -moz-box-shadow: 0 3px rgba(58,87,175,.75); 
-  box-shadow: 0 3px rgba(58,87,175,.75);
-  transition: all 0.1s linear 0s; 
-  top: 0px;
-  position: relative;
-}
 
-a.button:hover {
-  top: 3px;
-  background-color:#2e458b;
-  -webkit-box-shadow: none; 
-  -moz-box-shadow: none; 
-  box-shadow: none;
-  
-}
 
