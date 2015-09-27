@@ -20,6 +20,7 @@ $(function() {
                     function(msg) {
                         document.location.href = "/session";
                     }
+                );
             }
         ); 
         console.log($("#username, #password").serialize())
