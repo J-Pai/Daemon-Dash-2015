@@ -48,6 +48,9 @@ module.exports.routes = {
   '/organization': 'PageController.organization',
   '/personal': 'PageController.personal',
   'POST /user/create': 'UserController.create',
+  'POST /events/create': 'EventsController.create',
+  'POST /events/findAll': 'EventsController.findAll',
+  'POST /events/join': 'EventsController.join',
   'POST /login': 'AuthController.login',
   '/logout': 'AuthController.logout',
 };

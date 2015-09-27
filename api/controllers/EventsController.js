@@ -7,20 +7,33 @@
 
 module.exports = {
 	create: function(req, res) {
-		Event.create({
+		sails.sockets.broadcast('EventsUpdates', 'update', {msg: 'Events Create Function Called'});
+
+        Events.create({
 			name: req.param('name'),
 			organization: req.param('organization'),
 			copmensation: req.param('compensation'),
 			description: req.param('description')
 		}).exec(
-			function(err, user) {
+			function(err, e) {
 				if (err) {
 					console.log(err);
 					return res.send(err, 500);
 				}
-				return res.redirect('/')
+				return res.send(e);
 			}
 		)
-	}
+	},
+    findAll: function(req, res) {
+        Events.find().exec(function(err, e) {
+            res.send(e);
+        });
+    },
+    join: function(req, res) {
+        if (req.isSocket){
+            sails.sockets.join(req.socket, 'EventsUpdates');
+            res.send('Subscribed to Events room');
+        }
+    }
 };
 

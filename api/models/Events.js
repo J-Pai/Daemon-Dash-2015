@@ -14,11 +14,11 @@ module.exports = {
   	},
   	organization: {
   		type:'string',
-  		required: true
+//  		required: true
   	},
   	compensation: {
   		type: 'integer',
-  		required: true
+//  		required: true
   	},
   	description: {
   		type: 'text',
