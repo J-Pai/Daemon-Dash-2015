@@ -3,22 +3,18 @@ $.post('/getCurrentUser',
         $.post('/user/find',
             {id: data.user},
             function (user) {
-                console.log(user.name);
                 $('#head').append(user.name);
             }
         );        
     }
 );
 
-var eventList = $('#event-list');
-
 io.socket.post('/events/join',
     function (data, jwres) {
-        eventList.html("");
         $.post('/events/findAll',
             function(data){
                 for ( var i = 0; i < data.length; i++ ){
-                    eventList.append('<li>' + data[i].name + '</li>');
+                    $('#list-group').append('<button type="button" class="list-group-item">'+data[i].name+'</button>');
                 }
             }
         );
@@ -31,7 +27,7 @@ io.socket.on('update',
         $.post('/events/findAll',
             function(data){
                 for ( var i = 0; i < data.length; i++ ){
-                    eventList.append('<li>' + data[i].name + '</li>');
+                    $('#list-group').append('<li>' + data[i].name + '</li>');
                 }
             }
         );

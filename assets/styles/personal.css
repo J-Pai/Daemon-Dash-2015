@@ -1,16 +1,17 @@
+.list-group-item-heading {
+	top:200px;
+	left:20px;
+	width:40%;
+}
+body{
+	background-color: transparent;
+}
 .list-group {
-	position: relative;
-	display: inline;
-}
-#table-container{
-	margin-left: auto;
-	margin-right: 100px;
-}
-.panel {
-	margin-bottom:0px;
-}
-.table {
-	margin-bottom: 0px;
+	position:relative;
+	margin-top:-20px;
+	top:200px;
+	width:900px;
+	left:20px;
 }
 .container {
 	position:fixed;
@@ -69,3 +70,4 @@ html {
 	background-color:#ededed;
 	border-color:transparent;
 	color:#2F3235;
+}
