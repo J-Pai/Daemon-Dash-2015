@@ -59,7 +59,7 @@ module.exports = {
                 Events.find().exec(
                     function(err, events){
                         for(var i = 0; i < data; i++){
-                            Events.destroy(events[i]).exec(
+                            Events.destroy({id: events[i].id}).exec(
                                 function(err){
                                     console.log('Event deleted');
                                 }
