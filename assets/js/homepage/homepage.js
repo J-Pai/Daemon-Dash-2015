@@ -1,14 +1,19 @@
 $(function() {
     
-    var $formLogin = $('#login-form');
-    var $formLost = $('#lost-form');
-    var $formRegister = $('#register-form');
-    var $divForms = $('#div-forms');
+    var $formLogin = $('#signinbox');
+    var $formRegister = $('#sign-up-form');
     var $modalAnimateTime = 300;
     var $msgAnimateTime = 150;
     var $msgShowTime = 2000;
+    $("#register-button").on('click', function() {
+        $formRegister.submit()
+    });
+    $("#signin").on('click', function() {
+        $formLogin.submit()
+    })
 
     $("form").submit(function () {
+        console.log($formRegister.serialize())
         switch(this.id) {
             case "login-form":
                 var $lg_username=$('#login_username').val();
@@ -17,15 +22,6 @@ $(function() {
                     msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "error", "glyphicon-remove", "Login error");
                 } else {
                     msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "success", "glyphicon-ok", "Login OK");
-                }
-                return false;
-                break;
-            case "lost-form":
-                var $ls_email=$('#lost_email').val();
-                if ($ls_email == "ERROR") {
-                    msgChange($('#div-lost-msg'), $('#icon-lost-msg'), $('#text-lost-msg'), "error", "glyphicon-remove", "Send error");
-                } else {
-                    msgChange($('#div-lost-msg'), $('#icon-lost-msg'), $('#text-lost-msg'), "success", "glyphicon-ok", "Send OK");
                 }
                 return false;
                 break;
