@@ -11,13 +11,13 @@ body{
 	margin-top:-20px;
 	top:200px;
 	width:900px;
-	left:20px;
+	left:10%;
 }
 .container {
 	position:fixed;
 	width:800px;
 	top:20%;
-	right:20%;
+	right:18%;
 	margin-right:-200px;
 	border:none;
 }
