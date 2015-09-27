@@ -9,10 +9,18 @@ $(function() {
         $formRegister.submit()
     });
     $("#signinbox").on('click', function() {
-        $formLogin.submit()
+        //$formLogin.submit();
         $.post("/login",
             $("#username, #password").serialize(),
-            function(msg){ console.log("HELLO"); document.location.href = "/session"; }
+            function(msg) {
+                var accountType = null;
+
+                $.post("/login/find",
+                    $('#username').serialize(),
+                    function(msg) {
+                        document.location.href = "/session";
+                    }
+            }
         ); 
         console.log($("#username, #password").serialize())
     })
