@@ -59,9 +59,6 @@ $(function() {
             var $rg_username=$('#register_username').val();
             var $rg_email=$('#register_email').val();
             var $rg_password=$('#register_password').val();
-            if($rg_username==undefined || $rg_email==undefined || $rg_password==undefined){
-                alert("please fill out all fields.");
-            } 
             if ($rg_username == "ERROR") {
                 msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "error", "glyphicon-remove", "Register error");
             } else {
