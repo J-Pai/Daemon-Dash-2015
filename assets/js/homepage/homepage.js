@@ -8,12 +8,13 @@ $(function() {
     $("#register-button").on('click', function() {
         $formRegister.submit()
     });
-    $("#signin").on('click', function() {
+    $("#signinbox").on('click', function() {
         $formLogin.submit()
     })
 
     $("form").submit(function () {
         console.log($formRegister.serialize())
+        console.log(this.id)
         switch(this.id) {
             case "login-form":
                 var $lg_username=$('#login_username').val();
