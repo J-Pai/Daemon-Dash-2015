@@ -19,6 +19,7 @@ $(function() {
             $.post('/events/find',
                 {id: this.id},
                 function (events) {
+                    $('#name').text(events.name)
                     $('#organization').text(events.organization)
                     $('#date').text(events.date)
                     $('#compensation').text(events.compensation)
