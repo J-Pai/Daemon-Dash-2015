@@ -1,19 +1,16 @@
-	<!DOCTYPE html>
-	<html>
-	<head>
-		<title>Daemon Dash Web App</title>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Daemon Dash Web App</title>
 		<script src="/js/dependencies/jquery-2.1.4.js"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="styles/signup.css">
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-		<link rel="stylesheet" type="text/css" href="/styles/signup.css">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
 		<script src="/js/homepage/homepage.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	</head>
-	<body>
-		<div id="header">
-			<h1 id="title">Web App Index</h1>
-		</div>
+    <body>
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="container">
 				<div>	
@@ -29,50 +26,50 @@
 					<ul class="nav navbar-nav navbar-right">
 						<li class="hidden">
 							<a href="pate-top"></a>
-							<li>
-								<a class="page-scroll" href="#about">About</a>
-							</li>
-							<li>
-								<a class="page-scroll" href="#team">Team</a>
-							</li>
-							<li>
-								<div class="inputbox">
-									<input class="input" type="text" name="name" id="name" placeholder="Username" required/>
-								</div>
-							</li>
-							<li>
-								<div class="inputbox">
-									<input class="input" type="password" name="name" id="name" placeholder="Password" required/>
-								</div>	
-							</li>
-							<li>
-								<div id="signinbox" class="page-scroll">
-									<div id="signin">Sign In</div>
-								</div>
-							</li>
-							<li>
-								<a class="page-scroll">
-									<button id="signup" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Sign Up
-									</button>
-
-								</a>
-							</li>
+						<li>
+							<a class="page-scroll" href="#about">About</a>
+						</li>
+						<li>
+							<div class="inputbox">
+								<input class="input" type="text" name="name" id="name" placeholder="Username" required/>
+							</div>
+						</li>
+						<li>
+							<div class="inputbox">
+								<input class="input" type="password" name="name" id="name" placeholder="Password" required/>
+							</div>	
+						</li>
+						<li>
+							<div id="signinbox" class="page-scroll">
+								<div id="signin">Sign In</div>
+							</div>
+						</li>
+						<li>
+							<a class="page-scroll">
+								<button id="signup" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Sign Up</button>
+							</a>
 						</li>
 					</ul>
 				</div>
 			</div>
 		</nav>
-
-
-		<!-- Button trigger modal -->
+		<header>
+			<div class="container">
+				<div class="intro-text">
+					<div class="intro-lead-in">Volunteer!</div>
+					<div class="intro-heading">Are you ready to volunteer?</div>
+					<a href="#services" class="page-scroll btn btn-xl">Tell Me More</a>
+				</div>
+			</div>
+		</header>
 
 		<!-- Modal -->
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="myModalLabel">Registration</h1>
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="myModalLabel">Registration</h1>
 						</div>
 						<div class="modal-body">
 							<form id="sign-up-form">
@@ -88,19 +85,19 @@
 									<label id="icon" for="name">
 										<span class="glyphicon glyphicon-envelope"></span></label>
 										<input type="text" name="name" id="name" placeholder="Email" required/>
-									</div>
-									<div class="form-group">
-										<label id="icon" for="name">
+								</div>
+								<div class="form-group">
+									<label id="icon" for="name">
 											<span class="glyphicon glyphicon-user"></span>
-										</label>
-										<input type="text" name="name" id="name" placeholder="Name" required/>
-									</div>
-									<div class="form-group">
-										<label id="icon" for="name">
+									</label>
+									<input type="text" name="name" id="name" placeholder="Name" required/>
+								</div>
+								<div class="form-group">
+									<label id="icon" for="name">
 											<span class="glyphicon glyphicon-lock"></span>
-										</label>
-										<input type="password" name="name" id="name" placeholder="Password" required/>
-									</div>
+									</label>
+									<input type="password" name="name" id="name" placeholder="Password" required/>
+								</div>
 								</form>
 							</div>
 							<div class="modal-footer">
@@ -113,4 +110,5 @@
 			</div>
 		</div>
 	</body>
-	</html>
+</html>
+
