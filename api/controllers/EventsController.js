@@ -38,8 +38,13 @@ module.exports = {
     },
     addPerson: function (req, res) {
         Events.find({id: req.param('id')}).exec(
-            function(err, user) {
-                console.log(user[0].name);
+            function(err, eventData) {
+                Events.update({id: req.param('id')}, {volunteers: eventData[0].volunteer.push(req.param('name'))}).exec(
+                    function(err, update){
+                        if(err) return res.send(err);
+                        return res.send(update);
+                    }
+                );
             }
         );        
     },

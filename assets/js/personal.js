@@ -1,10 +1,12 @@
 $(function() {
     var id;
+    var sessionName;
     $.post('/getCurrentUser',
         function (data) {
             $.post('/user/find',
                 {id: data.user},
                 function (user) {
+                    sessionName = user.name; 
                     $('#head').append(user.name);
                 }
                 );        
@@ -29,9 +31,10 @@ $(function() {
     $("#submit").on('click', function() {
         if (id != undefined) {
             $.post('/events/addPerson',
-                {id: id},
+                {id: id,
+                 name: sessionName},
                 function (events) {
-                    console.log("hello")
+                    console.log(events[0]);
                 })
         }
     })
