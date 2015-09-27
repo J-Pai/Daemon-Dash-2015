@@ -18,11 +18,11 @@ module.exports = {
         required: true,
         unique: true
     },
-    type: {
+    account: {
         type: 'string',
         required: true
     },
-    encryptedPassword: {
+    password: {
         type: 'string',
         required: true
     },

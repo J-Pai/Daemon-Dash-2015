@@ -37,7 +37,7 @@ module.exports.routes = {
   },
   '/signup': {
     view: 'signup'
-  }
+  },
 
   /***************************************************************************
   *                                                                          *
@@ -48,5 +48,5 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
-
+  'POST /user/create': 'UserController.create',
 };
