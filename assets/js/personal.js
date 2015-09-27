@@ -37,7 +37,7 @@ $(function() {
     })
     io.socket.post('/events/join',
         function (data, jwres) {
-            $('#list-group').html("");
+            $('#list-group').html('<h1 class="list-group-item-heading">Volunteer Requests</h1>');
             $.post('/events/findAll',
                 function(data){
                     for ( var i = 0; i < data.length; i++ ){
@@ -50,7 +50,7 @@ $(function() {
 
     io.socket.on('update',
         function(msg){
-            $('#list-group').html("");
+            $('#list-group').html('<h1 class="list-group-item-heading">Volunteer Requests</h1>');
             $.post('/events/findAll',
                 function(data){
                     for ( var i = 0; i < data.length; i++ ){
