@@ -7,7 +7,7 @@
 
 module.exports = {
     session: function(req, res) {
-        res.view('session');
+        res.view('organization');
     }
 };
 
