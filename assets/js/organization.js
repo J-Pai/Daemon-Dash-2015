@@ -1,8 +1,11 @@
 $(function() {
-	$("#submit").on('click', function() {
+	$("#submit").on('click', function(e) {
+        e.preventDefault();
 		var $form = $('#form')
 		$.post("/event/create",
-			$form.serialize(), function(msg) {});
+			$form.serialize(), 
+            function(msg) {}
+        );
 	})
 
 
