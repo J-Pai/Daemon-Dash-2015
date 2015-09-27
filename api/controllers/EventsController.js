@@ -36,6 +36,13 @@ module.exports = {
             res.send('Subscribed to Events room');
         }
     },
+    addPerson: function (req, res) {
+        Events.find({id: req.param('id')}).exec(
+            function(err, user) {
+                console.log(user[0].name);
+            }
+        );        
+    },
     clear: function(req, res) {
         Events.count({}).exec(
             function(err, data) {

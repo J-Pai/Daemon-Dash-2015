@@ -55,5 +55,6 @@ module.exports.routes = {
   '/logout': 'AuthController.logout',
   '/getCurrentUser': 'AuthController.getCurrentUser',
   '/user/clear': 'UserController.clear',
-  '/events/clear': 'EventsController.clear'
+  '/events/clear': 'EventsController.clear',
+  'POST /events/addPerson': 'EventsController.addPerson'
 };
