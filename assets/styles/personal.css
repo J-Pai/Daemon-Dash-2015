@@ -16,8 +16,8 @@
 	position:fixed;
 	width:800px;
 	top:20%;
-	left:50%;
-	margin-left:-400px;
+	right:20%;
+	margin-right:-200px;
 	border:none;
 }
 .tablehead {
@@ -43,6 +43,7 @@
 	font-size:25px;
 	font-weight:bold;
 	background-color:#2F3235;
+	width:800px;
 }
 #head {
 	text-align:left;

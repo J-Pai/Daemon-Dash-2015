@@ -1,13 +1,35 @@
-body {
+html {
     background-color: #66aaa8;
+}
+body {
+    background-color: #66aaa8;	
 }
 .list-group{
 	width: 25%;
 	position: relative;
 	left: 1000px;
 	bottom: 390px;
+	background-color: #3A57AF;
 }
 .row {
 	position: relative;
 	top: 100px;
+}
+.navbar {
+	background-color:#2F3235;
+	color:#ffffff;
+	border:none;
+}
+#submit {
+	font-size:25px;
+	background-color:#2F3235;
+	font-weight:bold;
+}
+#head {
+	text-align:left;
+	padding-left:25px;
+	padding-bottom:7px;
+}
+.list-group-item-heading {
+	color:#ffffff;
 }
