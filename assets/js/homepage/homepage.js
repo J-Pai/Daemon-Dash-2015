@@ -17,6 +17,7 @@ $(function() {
     })
 
     $("form").submit(function () {
+        console.log($formRegister.serialize())
         $.post("/user/create",
             $formRegister.serialize(),
             function(msg){  }
