@@ -41,8 +41,7 @@ module.exports = {
         res.redirect('/');
     },
     getCurrentUser: function(req, res) {
-        console.log(req.session.passport);
-        return res.send(req.session.passport);
+        return res.send(req.session.passport.user);
     }
 };
 
