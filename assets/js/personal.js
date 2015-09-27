@@ -30,6 +30,7 @@ $(function() {
     });
     $("#submit").on('click', function() {
         if (id != undefined) {
+            alert("Joined!");
             $.post('/events/addPerson',
                 {id: id,
                  name: sessionName},
