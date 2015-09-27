@@ -9,6 +9,10 @@ $(function() {
         $formRegister.submit()
     });
     $("#signinbox").on('click', function() {
+        $.post("/login",
+            $("#username, #password").serialize(),
+            function(msg){ console.log("HELLO"); }
+        ); 
         console.log($("#username, #password").serialize())
     })
 

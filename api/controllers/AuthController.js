@@ -24,10 +24,11 @@ module.exports = {
             }
             req.logIn(user, function(err) {
                 if (err) res.send(err);
-                return res.send({
+                return res.redirect("/session");
+/*                return res.send({
                     message: info.message,
                     user: user
-                });
+                });*/
             });
 
         })(req, res);

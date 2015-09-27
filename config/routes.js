@@ -45,6 +45,7 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
+  '/session': 'PageController.session',
   'POST /user/create': 'UserController.create',
   'POST /login': 'AuthController.login',
   '/logout': 'AuthController.logout',

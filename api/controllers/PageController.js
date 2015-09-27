@@ -6,6 +6,8 @@
  */
 
 module.exports = {
-	
+    session: function(req, res) {
+        res.view('session');
+    }
 };
 
