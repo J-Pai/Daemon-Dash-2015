@@ -3,28 +3,40 @@ $.post('/getCurrentUser',
         $.post('/user/find',
             {id: data.user},
             function (user) {
-                console.log(user.name);
                 $('#head').append(user.name);
             }
-        );        
+            );        
     }
-);
+    );
 $(function() {
 	$("#submit").on('click', function(e) {
         e.preventDefault();
-		var $form = $('#form')
-		$.post("/events/create",
-			$form.serialize(), 
-            function(msg) {}
-        );
-	})
+        var $form = $('#form')
+        $.post("/events/create",
+         $form.serialize(), 
+         function(msg) {}
+         );
+    })
+    $("body").on('click', 'button', function() {
+        if (this.id != "submit") {
+            console.log(this.id)
+            $.post('/events/find', {id: this.id},
+                function (events) {
+                            console.log('hello')
+                    $('#date').text(events.date)
+                    $('#compensation').text(events.compensation)
+                    $('#volunteers').text(events.volunteers)
+                    $('#description').text(events.description)
+                })
+        }
+    })
 })
 io.socket.post('/events/join', function(data, jwres) {
 	$.post('/events/findAll',
 		function(data) {
 			$("#list-group").html('<h4 class="list-group-item-heading">Events</h4>')
 			for (var i = 0; i < data.length; i++) {
-				$("#list-group").append('<button type="button" class="list-group-item">'+data[i].name+'</button>');
+				$("#list-group").append('<button type="button" id='+data[i].id+' class="list-group-item">'+data[i].name+'</button>');
 			}
 		})
 })
@@ -34,11 +46,11 @@ io.socket.on('update',
     function(msg){
         $.post('/events/findAll',
             function(data){
-				$("#list-group").html('<h4 class="list-group-item-heading">Events</h4>')
+                $("#list-group").html('<h4 class="list-group-item-heading">Events</h4>')
                 for ( var i = 0; i < data.length; i++ ){
-                    $("#list-group").append('<button type="button" class="list-group-item">'+data[i].name+'</button>');
+                    $("#list-group").append('<button type="button" id='+data[i].id+' class="list-group-item">'+data[i].name+'</button>');
                 }
             }
-        );
+            );
     }
-);
+    );

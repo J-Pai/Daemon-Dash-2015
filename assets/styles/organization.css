@@ -7,11 +7,21 @@ body {
 .list-group{
 	width: 25%;
 	position: relative;
-	left: 1000px;
-	bottom: 390px;
+	left: 35%;
+	bottom: 440px;
 	background-color: #3A57AF;
 	padding-top:15px;
 	border-radius: 4px 4px 0px 0px;
+}
+.container {
+	position: relative;
+	right: 20%;
+}
+#box {
+	position: relative;
+	left: 30%;
+	bottom:548px ;
+	width: 30%;
 }
 .row {
 	position: relative;
