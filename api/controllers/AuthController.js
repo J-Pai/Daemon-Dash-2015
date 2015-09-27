@@ -23,7 +23,10 @@ module.exports = {
                 });
             }
             req.logIn(user, function(err) {
-                if (err) res.send(err);
+                if (err) {
+                    console.log(err)
+                    return res.send(err);
+                }
                 return res.redirect("/session");
 /*                return res.send({
                     message: info.message,

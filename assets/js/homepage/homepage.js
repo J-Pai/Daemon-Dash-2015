@@ -9,18 +9,19 @@ $(function() {
         $formRegister.submit()
     });
     $("#signinbox").on('click', function() {
+        $formLogin.submit()
         $.post("/login",
             $("#username, #password").serialize(),
-            function(msg){ console.log("HELLO"); }
+            function(msg){ console.log("HELLO"); document.location.href = "/session"; }
         ); 
         console.log($("#username, #password").serialize())
     })
 
     $("form").submit(function () {
-        console.log($formRegister.serialize())
+        console.log($formRegister.serialize)
         $.post("/user/create",
             $formRegister.serialize(),
-            function(msg){  }
+            function(msg){ }
         );
         switch(this.id) {
             case "login-form":
