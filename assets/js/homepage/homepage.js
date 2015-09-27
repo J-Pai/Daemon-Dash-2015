@@ -9,10 +9,24 @@ $(function() {
         $formRegister.submit()
     });
     $("#signinbox").on('click', function() {
-        $formLogin.submit()
+        //$formLogin.submit();
         $.post("/login",
             $("#username, #password").serialize(),
-            function(msg){ console.log("HELLO"); document.location.href = "/session"; }
+            function(msg) {
+                var accountType = null;
+
+                $.post("/user/find",
+                    $('#username').serialize(),
+                    function(data) {
+                        accountType = data[0].account;
+                        if(accountType === "Personal") {
+                            document.location.href = "/personal";
+                        } else {
+                            document.location.href = "/organization";
+                        }
+                    }
+                );
+            }
         ); 
         console.log($("#username, #password").serialize())
     })

@@ -27,11 +27,10 @@ module.exports = {
                     console.log(err)
                     return res.send(err);
                 }
-                return res.redirect("/session");
-/*                return res.send({
+                return res.send({
                     message: info.message,
                     user: user
-                });*/
+                });
             });
 
         })(req, res);
