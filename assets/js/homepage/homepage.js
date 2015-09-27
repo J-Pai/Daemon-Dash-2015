@@ -29,7 +29,7 @@ $(function() {
                 }
                 return false;
                 break;
-            case "register-form":
+            case "sign-up-form":
                 var $rg_username=$('#register_username').val();
                 var $rg_email=$('#register_email').val();
                 var $rg_password=$('#register_password').val();
