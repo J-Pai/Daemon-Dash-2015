@@ -31,6 +31,7 @@ $(function() {
     })
 })
 io.socket.post('/events/join', function(data, jwres) {
+    $('#list-group').html("");
 	$.post('/events/findAll',
 		function(data) {
 			for (var i = 0; i < data.length; i++) {
@@ -42,6 +43,7 @@ io.socket.post('/events/join', function(data, jwres) {
 
 io.socket.on('update',
     function(msg){
+        $('#list-group').html("");
         $.post('/events/findAll',
             function(data){
                 for ( var i = 0; i < data.length; i++ ){
