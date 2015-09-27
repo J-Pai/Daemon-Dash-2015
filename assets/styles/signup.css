@@ -75,10 +75,15 @@ ol, ul, li {list-style:none}
 header {
   text-align: center;
     color: #ffffff;
-    background-attachment: scroll;
     background-image: url(../images/header-bg.jpg);
     background-position: center center;
-    background-repeat: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+html{
+	background-image: url(../images/header-bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 header .intro-text {
@@ -164,7 +169,7 @@ html{
   text-align: left;
   vertical-align: middle;
 }
-
+	
 input[type=radio] {
   visibility: hidden;
 }
@@ -227,17 +232,14 @@ hr{
   background-color: #3a57af;
   padding: 8px 28px 8px 15px;
   margin-left: 15px;
-  -webkit-border-radius: 4px 0px 0px 4px; 
-  -moz-border-radius: 4px 0px 0px 4px; 
-  border-radius: 4px 0px 0px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px; 
+  -moz-border-radius: 4px 4px 4px 4px; 
+  border-radius: 4px 4px 4px 4px;
   color: white;
   -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.09);
   -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
   box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
   border: solid 0px #cbc9c9;
 }
-
-
-
 
 
