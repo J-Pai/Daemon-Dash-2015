@@ -38,8 +38,15 @@ module.exports = {
     },
     addPerson: function (req, res) {
         Events.find({id: req.param('id')}).exec(
-            function(err, user) {
-                console.log(user[0].name);
+            function(err, eventData) {
+                var name = req.param('name');
+                eventData[0].volunteers.push(name);
+                Events.update({id: req.param('id')}, {volunteers: eventData[0].volunteers}).exec(
+                    function(err, update){
+                        if(err) return res.send(err);
+                        return res.send(update);
+                    }
+                );
             }
         );        
     },
@@ -52,7 +59,7 @@ module.exports = {
                 Events.find().exec(
                     function(err, events){
                         for(var i = 0; i < data; i++){
-                            Events.destroy(events[i]).exec(
+                            Events.destroy({id: events[i].id}).exec(
                                 function(err){
                                     console.log('Event deleted');
                                 }
