@@ -2,11 +2,7 @@ html {
     background-color: #66aaa8;
 }
 body {
-    background-color: #66aaa8;	
-}
-.list-group{
-	
-	background-color: #3A57AF;
+	background-color: #66aaa8;
 }
 
 .navbar {
@@ -19,14 +15,32 @@ body {
 	background-color:#2F3235;
 	font-weight:bold;
 }
+.vcenter {
+	display: inline-block;
+    vertical-align: middle;
+    margin:auto;
+}
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+.container {
+	margin-top: 285px;
+	text-align: center;
+	vertical-align: middle;
+}
 #head {
 	text-align:left;
 	padding-left:25px;
 	padding-bottom:7px;
 }
-.list-group-item-heading {
-	color:#ffffff;
-	font-weight:bold;
-	padding-bottom: 7px;
-	padding-left: 15px;
+h3{
+	font-size:30px;
 }
