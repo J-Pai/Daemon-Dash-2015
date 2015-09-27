@@ -14,7 +14,7 @@ module.exports = {
 			copmensation: req.param('compensation'),
 			description: req.param('description'),
 			date: req.param('date'),
-			volunteers: null
+			volunteers: []
 		}).exec(
 			function(err, e) {
 				if (err) {
@@ -34,6 +34,9 @@ module.exports = {
             sails.sockets.join(req.socket, 'EventsUpdates');
             res.send('Subscribed to Events room');
         }
+    },
+    deleteAll: function(req, res) {
+        
     }
 };
 
