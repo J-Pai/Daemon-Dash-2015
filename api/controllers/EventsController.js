@@ -35,8 +35,26 @@ module.exports = {
             res.send('Subscribed to Events room');
         }
     },
-    deleteAll: function(req, res) {
-        
+    clear: function(req, res) {
+        Events.count({}).exec(
+            function(err, data) {
+                if(err) {
+                    return res.send(err, 500);
+                }
+                Events.find().exec(
+                    function(err, events){
+                        for(var i = 0; i < data; i++){
+                            Events.destroy(events[i]).exec(
+                                function(err){
+                                    console.log('Event deleted');
+                                }
+                            );
+                        }
+                        return res.send({message: "FINISHED"});
+                    }
+                );
+            }
+        );
     }
 };
 

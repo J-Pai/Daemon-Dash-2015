@@ -23,5 +23,26 @@ module.exports = {
             }
         );
     },
+    clear: function(req, res) {
+        User.count({}).exec(
+            function(err, data) {
+                if(err) {
+                    return res.send(err, 500);
+                }
+                User.find().exec(
+                    function(err, users){
+                        for(var i = 0; i < data; i++){
+                            User.destroy(users[i]).exec(
+                                function(err){
+                                    console.log('User deleted');
+                                }
+                            );
+                        }
+                        return res.send({message: "FINISHED"});
+                    }
+                );
+            }
+        );
+    }
 };
 
