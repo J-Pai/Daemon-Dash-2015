@@ -39,7 +39,9 @@ module.exports = {
     addPerson: function (req, res) {
         Events.find({id: req.param('id')}).exec(
             function(err, eventData) {
-                Events.update({id: req.param('id')}, {volunteers: eventData[0].volunteer.push(req.param('name'))}).exec(
+                var name = req.param('name');
+                eventData[0].volunteers.push(name);
+                Events.update({id: req.param('id')}, {volunteers: eventData[0].volunteers}).exec(
                     function(err, update){
                         if(err) return res.send(err);
                         return res.send(update);
