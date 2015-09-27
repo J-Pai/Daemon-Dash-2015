@@ -20,7 +20,6 @@ $(function() {
         $.post("/login",
             $("#username, #password").serialize(),
             function(msg) {
-                console.log(msg.message);
                 if(msg.message === "Logged In Successfully"){
                     var accountType = null;
                     $.post("/user/find",
@@ -41,7 +40,6 @@ $(function() {
             ); 
     }
     $("form").submit(function () {
-        console.log($formRegister.serialize)
         $.post("/user/create",
             $formRegister.serialize(),
             function(msg){ }

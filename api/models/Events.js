@@ -24,6 +24,9 @@ module.exports = {
   		type: 'text',
 
   	},
+  	date: {
+  		type: 'text',
+  	},
   	volunteers: {
   		type: 'array',
   	}
