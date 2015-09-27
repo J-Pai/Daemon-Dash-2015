@@ -12,7 +12,8 @@ module.exports = {
             name: req.param('name'),
             email: req.param('email'),
             account: req.param('account'),
-            password: req.param('password')
+            password: req.param('password'),
+            account_id: null
         }).exec(
             function(err, user) {
                 if (err) {
