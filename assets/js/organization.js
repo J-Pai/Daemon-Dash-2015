@@ -22,7 +22,6 @@ $(function() {
             console.log(this.id)
             $.post('/events/find', {id: this.id},
                 function (events) {
-                            console.log('hello')
                     $('#date').text(events.date)
                     $('#compensation').text(events.compensation)
                     $('#volunteers').text(events.volunteers)
