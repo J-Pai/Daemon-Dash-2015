@@ -34,6 +34,8 @@ $(function() {
                             }
                         }
                         );
+                } else {
+                    alert("Incorrect username or password.");
                 }
             }
             ); 
