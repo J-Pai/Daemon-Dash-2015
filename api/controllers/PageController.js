@@ -6,10 +6,8 @@
  */
 
 module.exports = {
-    session: function(req, res) {
-        res.view('organization');
     personal: function(req, res) {
-        return res.view('session');
+        return res.view('personal');
     },
     organization: function(req, res) {
         return res.view('organization');
