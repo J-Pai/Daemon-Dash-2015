@@ -8,7 +8,6 @@
 module.exports = {
 	create: function(req, res) {
 		sails.sockets.broadcast('EventsUpdates', 'update', {msg: 'Events Create Function Called'});
-		console.log(req)
         Events.create({
 			name: req.param('name'),
 			organization: req.param('organization'),
@@ -19,7 +18,6 @@ module.exports = {
 		}).exec(
 			function(err, e) {
 				if (err) {
-					console.log(err);
 					return res.send(err, 500);
 				}
 				return res.send(e);

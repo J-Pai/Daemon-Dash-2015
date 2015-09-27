@@ -1,3 +1,14 @@
+$.post('/getCurrentUser',
+    function (data) {
+        $.post('/user/find',
+            {id: data.user},
+            function (user) {
+                console.log(user.name);
+                $('#head').append(user.name);
+            }
+        );        
+    }
+);
 $(function() {
 	$("#submit").on('click', function(e) {
         e.preventDefault();

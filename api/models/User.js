@@ -27,6 +27,9 @@ module.exports = {
         minLength: 3, 
         required: true
     },
+    account_id: {
+        type: 'string'
+    }
 /*    toJSON: function() {
         var obj = this.toObject();
         delete obj.password;
@@ -37,7 +40,6 @@ module.exports = {
         bcrypt.genSalt(10, function(err, salt) {
              bcrypt.hash(user.password, salt, function(err, hash) {
                 if (err) {
-                    console.log(err);
                     cb(err);
                 } else {
                     user.password = hash;
