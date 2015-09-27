@@ -8,6 +8,7 @@
 	<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<script src="/js/organization.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles/organization.css">
 </head>
 <body>
 	<div class="container">
@@ -37,6 +38,13 @@
 						</div>
 					</div>
 					<div class="form-group">
+						<label for="InputEmail">Enter Compensation</label>
+						<div class="input-group">
+							<input type="text" class="form-control" id="InputEmailSecond" name="compensation" placeholder="Confirm Email" required>
+							<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+						</div>
+					</div>
+					<div class="form-group">
 						<label for="InputMessage">Description</label>
 						<div class="input-group">
 							<textarea name="description" id="InputMessage" class="form-control" rows="5"></textarea>
@@ -48,5 +56,11 @@
 			</form>
 		</div>
 	</div>
+	<ul class="list-group">
+		<h4 class="list-group-item-heading">
+			Volunteer Requests
+		</h4>
+		<button type="button" class="list-group-item">Cras justo odio</button>
+	</ul>
 </body>
 </html>

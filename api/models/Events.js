@@ -23,6 +23,9 @@ module.exports = {
   	description: {
   		type: 'text',
 
+  	},
+  	volunteers: {
+  		type: 'array',
   	}
   }
 };
