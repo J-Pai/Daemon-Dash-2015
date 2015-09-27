@@ -18,6 +18,7 @@ module.exports = {
 		}).exec(
 			function(err, e) {
 				if (err) {
+                    console.log(err)
 					return res.send(err, 500);
 				}
 				return res.send(e);

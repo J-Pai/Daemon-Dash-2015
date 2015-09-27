@@ -17,7 +17,7 @@ module.exports = {
 //  		required: true
   	},
   	compensation: {
-  		type: 'integer',
+  		type: 'string',
 //  		required: true
   	},
   	description: {
