@@ -1,7 +1,8 @@
 $(function() {
 	$("#submit").on('click', function() {
 		var $form = $('#form')
-		$.post("/event/create",
+		console.log($form.serialize())
+		$.post("/events/create",
 			$form.serialize(), function(msg) {});
 	})
 
