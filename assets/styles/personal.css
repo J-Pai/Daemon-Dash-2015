@@ -44,7 +44,10 @@ body{
 	font-size:25px;
 	font-weight:bold;
 	background-color:#2F3235;
-	width:800px;
+	width:772px;
+	position:relative;
+	top:20%;
+
 }
 #head {
 	text-align:left;
