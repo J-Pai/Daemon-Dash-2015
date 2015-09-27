@@ -11,7 +11,7 @@ module.exports = {
         Events.create({
 			name: req.param('name'),
 			organization: req.param('organization'),
-			copmensation: req.param('compensation'),
+			compensation: req.param('compensation'),
 			description: req.param('description'),
 			date: req.param('date'),
 			volunteers: []
